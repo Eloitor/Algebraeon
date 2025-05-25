@@ -180,7 +180,7 @@ where
 }
 impl<R: MetaType> MetaRingEq for R where Self::Signature: RingSignature + EqSignature {}
 
-pub trait UnitsSignature: RingSignature {
+pub trait UnitsSignature: SemiRingSignature {
     fn inv(&self, a: &Self::Set) -> Result<Self::Set, RingDivisionError>;
 
     fn is_unit(&self, a: &Self::Set) -> bool {
